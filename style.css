@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Anton", sans-serif;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+}
+
+body {
+  background: url("greenflame.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.content img {
+  max-height: 400px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.content img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  transition: text-shadow 0.3s;
+}
+
+h1:hover {
+  text-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
+  cursor: default;
+}
+
+p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+p:hover {
+  cursor: default;
+}
+
+.btn {
+  margin-top: 20px;
+  background: #39ff14;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #66ff66;
+}
+
+.btn:active {
+  transform: scale(1);
+  background-color: #39ff14;
+}
+
+@keyframes flash {
+  0% {
+    text-shadow: 0 0 5px #39ff14;
+  }
+  50% {
+    text-shadow: 0 0 20px #39ff14;
+  }
+  100% {
+    text-shadow: 0 0 5px #39ff14;
+  }
+}
+
+.flash {
+  animation: flash 1s ease-in-out;
+}
